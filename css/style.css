@@ -1,0 +1,67 @@
+.flexbox-container{
+height: 700px;
+
+    /* Svi kontejneri ce biti iste visine i u istoj liniji */
+    /* Ako se ekran smanjuje ili povecava, elementi ce se zajedno 
+    prilagoditi sirini ekrana */
+    display: flex;
+
+    /* Divovi ce se prikazai u koloni */
+    /* flex-direction: column; */
+
+    /* Ravnaju se po main axis */
+    /* justify-content: center; */
+
+    /* Ravnaju se po cross axis */
+    /* align-items: center; */
+
+    /* flex wrap dozvoljava elementima da se pomeraju kad se ekran smanjuje,
+    a align-content odredjuje kako ce se rasporediti u odnosu na ose*/
+    /* flex-wrap: wrap; */
+
+    /* Flexbox direction - main axis and cross axis */
+    /* justify-content sluzi da podesavamo main axis */
+    /* flex-start orijentise elemente od pocetna main axis */
+    /* justify-content: space-around; */
+    /* center, space-between, space-around */
+
+    /* align-items sluzi da podesaavamo cross axis */
+    /* stretch je default */
+    /* flex-start redja elemente od vrha cross axis*/
+    /* center ih centrira po cross axis */
+    /* align-items: center;  */
+
+    /* Za multiline flexbox container koristimo align-content */
+    /* align-content: space-between; */
+
+    /* Skracenica: flex */
+}
+/* Ovde definisemo zajednicke karakteristike svih divova */
+.flexbox-item{ 
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}
+.flexbox-item-1{
+    min-height: 100px;
+    /* Ukoliko ne zelimo da se div smanji */
+    flex-shrink: 0;
+}
+.flexbox-item-2{
+    min-height: 200px;
+    /* Ako divovi imaju istu vrednost, bice iste velicine */
+    flex-grow: 2;
+    /* Ako ovo dodamo,  flexbox2 bice dvaput veci od flexbox3 */
+    flex-basis: 0;
+    /* Item ce se poravnati po sredini containera, default je stretch */
+    align-self: center;
+    /* Menja redosled item-a u container-u */
+    order: 3;
+}
+.flexbox-item-3{
+    min-height: 300px;
+    /* Ukoliko zelimo da div zauzme preostali prostor */
+    flex-grow: 1;
+    flex-basis: 0;
+}
