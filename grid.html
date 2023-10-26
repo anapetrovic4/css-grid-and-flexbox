@@ -1,16 +1,46 @@
+<!-- Flexbox je jednodimenzionalan -->
+<!-- SS Grid je dvodimenzionalan -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/grid.css">
     <title>CSS Grid</title>
+    <style>
+        .wrapper{
+            /* Moramo da definisemo dimenzije grida */
+            display:grid;
+            /* koliko god div-ova da kreiramo, oni ce imati ovaj odnos */
+            grid-template-columns: 70% 30%;
+            /* Ne moramo da koristimo margin, vec gap */
+            grid-column-gap: 1em;
+            grid-row-gap: 1em;
+            /* Skracenica: grid-gap: 1em; */
+        }
+        .wrapper > div{
+            background: #eee;
+            padding: 1em;
+        }
+        .wrapper > div:nth-child(odd){
+            background: #ddd;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <div class="item item-1">1</div>
-        <div class="item item-2">1</div>
-        <div class="item item-3">1</div>
+    <div class="wrapper">
+        <div>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus quas beatae cupiditate modi quis! Tempora incidunt porro quibusdam modi perspiciatis voluptates cum, odit, veritatis similique ratione quos nostrum provident tempore explicabo quod minima alias. Animi iure excepturi veritatis harum nesciunt sint debitis quo molestias nostrum? Iure praesentium explicabo asperiores laboriosam culpa tempore! Quisquam, quis autem totam officia eligendi molestias accusamus magnam consequuntur assumenda iste! Atque nisi magni dolore. Itaque illum tenetur excepturi labore ratione praesentium omnis eos cupiditate laboriosam suscipit!
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, architecto atque iure vitae cupiditate odit qui, corrupti eligendi similique exercitationem a! Voluptates aspernatur vel sit voluptatum reiciendis provident hic autem.
+        </div>
+        <div>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus quas beatae cupiditate modi quis! Tempora incidunt porro quibusdam modi perspiciatis voluptates cum, odit, veritatis similique ratione quos nostrum provident tempore explicabo quod minima alias. Animi iure excepturi veritatis harum nesciunt sint debitis quo molestias nostrum? Iure praesentium explicabo asperiores laboriosam culpa tempore! Quisquam, quis autem totam officia eligendi molestias accusamus magnam consequuntur assumenda iste! Atque nisi magni dolore. Itaque illum tenetur excepturi labore ratione praesentium omnis eos cupiditate laboriosam suscipit!
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, architecto atque iure vitae cupiditate odit qui, corrupti eligendi similique exercitationem a! Voluptates aspernatur vel sit voluptatum reiciendis provident hic autem.
+        </div>
     </div>
 </body>
 </html>
